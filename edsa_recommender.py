@@ -45,7 +45,7 @@ def main():
 
     # DO NOT REMOVE the 'Recommender System' option below, however,
     # you are welcome to add more options to enrich your app.
-    page_options = ["Recommender System","Solution Overview"]
+    page_options = ["Recommender System","Solution Overview","Introduction"]
 
     # -------------------------------------------------------------------
     # ----------- !! THIS CODE MUST NOT BE ALTERED !! -------------------
@@ -100,9 +100,32 @@ def main():
     # -------------------------------------------------------------------
 
     # ------------- SAFE FOR ALTERING/EXTENSION -------------------
+     
+        if page_selection == "Introduction":
+            st.title("Welcome to saving time on binge watching")
+            st.write("In today’s technology driven world, recommender systems are socially and economically critical for ensuring that                           individuals can make appropriate choices surrounding the content they engage with on a daily basis. One                                     application where this is especially true surrounds movie content recommendations; where intelligent algorithms                             can help viewers find great titles from thousands of options.With this context, EDSA is challenging us to                                   construct a recommendation algorithm based on content or collaborative filtering, capable of accurately monitor                             how a user will rate a movie they have not yet viewed based on their historical preferences.Providing an accurate                           and robust solution to this challenge has immense economic potential, with users of the system being exposed to                             content they would like to view or purchase - generating revenue and platform affinity.")
+            
+        st.subheader("Collaborators:")
+        st.write("Sihle Riti")
+        st.write("Nomfundo Manyisa")
+        st.write(" Kwanda Silekwa")
+        st.write("Thanyani Khedzi")
+        st.write("Thembinkosi Malefo")
+        st.write("Ofentse Makeketlane")
+        st.subheader("sources")
+        
+        st.write("This dataset consists of several million 5-star ratings obtained from users of the online MovieLens movie recommendation                    service. The MovieLens dataset has long been used by industry and academic researchers to improve the performance of                        explicitly-based recommender systems, and now you get to as well! We'll be using a special version of the MovieLens                          dataset which has enriched with additional data, and resampled for fair evaluation purposes.The data for the MovieLens                      dataset is maintained by the GroupLens research group in the Department of Computer Science and Engineering at the                          University of Minnesota. Additional movie content data was legally scraped from IMDB")
+    
+    # ------------- SAFE FOR ALTERING/solution overview -------------------
     if page_selection == "Solution Overview":
         st.title("Solution Overview")
-        st.write("Describe your winning approach on this page")
+        st.subheader(" Collaborative modelling")
+        st.write("We are going to give a brief explaination of collaborative filtering. Collaborative filtering is a technique that can                       filter out items that a user might like on the basis of reactions by similar users.It works by searching a large group of                   people and finding a smaller set of users with tastes similar to a particular user. It looks at the items they like and                     combines them to create a ranked list of suggestions to be more precise it is based on similarity in preference , taste                     and choices of two users. A good example that we can give you could be if user A, likes movies 1,2 and 3 and user B, likes                       movies 2,3 and 4 then this implies that they have similar interests and user A should like movie 4 and B should like                         movie 1.")
+        st.subheader(" Content_based modelling")
+        st.write("This filtering is based on the description or some data provided for that product. The system finds the similarity                         between recommended items based on their description or context. The user’s historical preference is taken into account                     to find products they may like in the future. For instance, if a user likes movies such as ‘Man in black’ then we can                       recommend him the movies of ‘Will Smith’ or movies with the genre ‘Sci-fi’.")
+        st.subheader("Content based modelling vs Collaborative modelling???")
+        st.write("Collaborative filtering recommender engine is a much better algorithim then content content based filtering since it is                     able to do feature learning on its own, in other words it can learn which features to use.")
+      
 
     # You may want to add more sections here for aspects such as an EDA,
     # or to provide your business pitch.
